@@ -1,39 +1,33 @@
 {
-  "name": "richchecks",
+  "name": "richchecks.1.0",
   "version": "1.0.0",
-  "description": "rick checks within actions",
+  "description": "![License](https://img.shields.io/github/license/JediSchools/RichChecks)",
   "main": "index.js",
-  "dependencies": {
-    "@actions/core": "^1.10.1",
-    "@actions/github": "^5.1.1",
-    "@octokit/plugin-retry": "^6.0.0",
-    "@octokit/plugin-throttling": "^7.0.0"
-  },
-  "devDependencies": {
-    "copy-webpack-plugin": "^11.0.0",
-    "eslint": "^8.49.0",
-    "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
-  },
   "scripts": {
-    "lint": "eslint .",
-    "build": "webpack",
-    "test": "webpack && act -j test",
-    "all": "npm run lint && npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JediSchools/RichChecks.git"
+    "url": "git+https://github.com/CouleurTraining/RickChecks.1.0.git"
   },
-  "keywords": [
-    "GitHub",
-    "Actions",
-    "JavaScript"
-  ],
-  "author": "JediSchools",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/JediSchools/RichChecks/issues"
+    "url": "https://github.com/CouleurTraining/RickChecks.1.0/issues"
   },
-  "homepage": "https://github.com/JediSchools/RichChecks#readme"
+  "homepage": "https://github.com/CouleurTraining/RickChecks.1.0#readme",
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "@actions/github": "^9.1.1",
+    "@octokit/plugin-retry": "^8.1.0",
+    "@octokit/plugin-throttling": "^11.0.3"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^14.0.0",
+    "eslint": "^10.6.0",
+    "webpack": "^5.108.1",
+    "webpack-cli": "^7.1.0"
+  }
 }

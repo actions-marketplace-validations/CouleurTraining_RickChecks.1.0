@@ -1,6 +1,6 @@
 name: 'Update/Create a Rich Check'
 description: "Rich checks from GitHub Mastery Book"
-author: "JediSchools"
+author: "CouleurTraining"
 inputs:
   name:
     description: 'The name of the check'
@@ -49,5 +49,5 @@ outputs:
     description: 'contains the check run id of the check created or updated'
 
 runs:
-  using: "node16"
+  using: "node24"
   main: "dist/index.js"
