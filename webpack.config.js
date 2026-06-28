@@ -1,22 +1,16 @@
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  entry: "./index.js", // your main entry point file
+  target: 'node',
+  mode: 'production',
+  entry: './index.js',
   output: {
-    filename: "index.js",
-    path: path.resolve(__dirname, "dist"), // output directory as dist
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'commonjs', // Keeps output compatible with GitHub Actions environment
   },
-  mode: "production", // use 'development' for unminified builds
-  target: "node", // target node runtime
-  plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "LICENSE.txt"),
-          to: path.resolve(__dirname, "dist"),
-        },
-      ],
-    }),
-  ],
+  resolve: {
+    // Crucial: Tells Webpack how to read the ESM exports maps inside @actions/github
+    conditionNames: ['node', 'import', 'require', 'default'], 
+  },
 };
